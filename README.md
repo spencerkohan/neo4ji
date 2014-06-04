@@ -7,7 +7,7 @@ Neo4ji offers tools for creating and managing multiple local neo4j instances
 I put this together as a convienience utility for spinning up multiple instances of neo4j for testing.  It is built for ease of use in a development setting, and probably should not be considered ready for production.
 
 **Installation**
-    
+
     $ npm install neo4ji
 
 **Usage**
@@ -49,7 +49,7 @@ The module has the following functions:
     var instances = neo4ji.instances();
 
     //get a graph server instance for testServer
-    var graph = neo4ji.server('testServer');
+    var graph = neo4ji.instance('testServer');
 
     //stop the testServer instance
     neo4ji.stop('testServer');
