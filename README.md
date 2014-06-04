@@ -6,6 +6,10 @@ Neo4ji offers tools for creating and managing multiple local neo4j instances
 
 I put this together as a convienience utility for spinning up multiple instances of neo4j for testing.  It is built for ease of use in a development setting, and probably should not be considered ready for production.
 
+**Installation**
+    
+    $ npm install neo4ji
+
 **Usage**
 
 Neo4ji consists of a command line tool and a node module.  The command line tool has the following options:
@@ -60,4 +64,4 @@ The module has the following functions:
 - everything is done synchronously
 - the initial usage of the command line tool or the module will fetch the neo4j tarball from neo4j.org, so it may take a while
 - calling <code>neo4ji.instance()</code> calls <code>start</code>, so it is garonteed to return an initialized instance
-- <code>neo4ji.instance()</code> creates an instance of a [node-neo4j](https://github.com/thingdom/node-neo4j) database object 
+- <code>neo4ji.instance()</code> creates an instance of a [node-neo4j](https://github.com/thingdom/node-neo4j) database object
