@@ -27,7 +27,7 @@ stop the server with the given name
     $ neo4ji stop <server name>
 
 show a list of instances managed by noe4ji
-        
+
     $ neo4ji instances
 
 
@@ -55,6 +55,8 @@ The module has the following functions:
 
 **Notes on behavior**
 
-- calling 'create' will always create a new instance, overwriting any existing instance
-- calling 'start' will create an instance if none exists
+- calling <code>create</code> will always create a new instance, overwriting any existing instance
+- calling <code>start</code> will create an instance if none exists
 - everything is done synchronously
+- the initial usage of the command line tool or the module will fetch the neo4j tarball from neo4j.org, so it may take a while
+- calling <code>neo4ji.instance()</code> calls <code>start</code>, so it is garonteed to return an initialized instance
