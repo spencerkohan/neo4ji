@@ -31,6 +31,7 @@ case "stop":
 case "instances":
     console.log(JSON.stringify(neo4ji.instances(), null, 4));
     break;
+    
 default:
     console.log('usage: ');
     console.log('\tcreate <instance name>\t\t: create a new instance with the given name');

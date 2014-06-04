@@ -60,3 +60,4 @@ The module has the following functions:
 - everything is done synchronously
 - the initial usage of the command line tool or the module will fetch the neo4j tarball from neo4j.org, so it may take a while
 - calling <code>neo4ji.instance()</code> calls <code>start</code>, so it is garonteed to return an initialized instance
+- <code>neo4ji.instance()</code> creates an instance of a [node-neo4j](https://github.com/thingdom/node-neo4j) database object 

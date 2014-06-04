@@ -9,7 +9,7 @@ var args = require('minimist')(process.argv.slice(2));
 var currentPort;
 var cwd = process.cwd();
 
-var neo4jiDir = cwd + '/neo4ji-instances/';
+var neo4jiDir = cwd + '/neo4ji/';
 var instancesDir = neo4jiDir + 'instances/';
 
 var instanceFilePath = neo4jiDir + 'instances.json';
@@ -25,6 +25,7 @@ function setup(){
         exec('mkdir ' + instancesDir)
     }
     if(!fs.existsSync(__dirname + '/template.tar.gz')){
+        console.log('fetching neo4ji tarball...')
         exec('curl http://dist.neo4j.org/neo4j-community-2.1.1-unix.tar.gz > ' + __dirname + '/template.tar.gz');
     }
 
