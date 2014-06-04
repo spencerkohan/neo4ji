@@ -1,0 +1,25 @@
+{
+  "name": "neo4ji",
+  "version": "0.0.0",
+  "description": "neo4ji offers a set of tools for managing multiple neo4j instances on the same machine",
+  "main": "neo4ji.js",
+  "scripts": {
+  },
+  "bin":{
+      "neo4ji":"neo4ji-cli.js"
+  },
+  "repository": "https://github.com/spencerkohan/neo4ji.git",
+  "keywords": [
+    "neo4j",
+    "database",
+    "db",
+    "graph"
+  ],
+  "author": "Spencer Kohan",
+  "license": "BSD",
+  "dependencies": {
+    "minimist":">=0.x",
+    "execSync":">=0.x",
+    "neo4j":">=0.x"
+  }
+}
