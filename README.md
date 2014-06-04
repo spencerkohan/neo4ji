@@ -11,18 +11,23 @@ I put this together as a convienience utility for spinning up multiple instances
 Neo4ji consists of a command line tool and a node module.  The command line tool has the following options:
 
 create a server with the given name
+
     $ neo4ji create <server name>
 
 destroy the server with the given name
+
     $ neo4ji destroy <server name>
 
 start the server with the given name (a new server will be created if none exists)
+
     $ neo4ji start <server name>
 
 stop the server with the given name
+
     $ neo4ji stop <server name>
 
 show a list of instances managed by noe4ji
+        
     $ neo4ji instances
 
 
