@@ -14,21 +14,25 @@ I put this together as a convienience utility for spinning up multiple instances
 
 Neo4ji consists of a command line tool and a node module.  The command line tool has the following options:
 
-create a server with the given name
+create a server with the given name.  Optionally set a specific version of neo4j to be instantiated (2.1.1 is the default)
 
-    $ neo4ji create <server name>
+    $ neo4ji create <server name> [-V <version>]
 
 destroy the server with the given name
 
     $ neo4ji destroy <server name>
 
-start the server with the given name (a new server will be created if none exists)
+start the server with the given name (a new server will be created if none exists). Optionally set a specific version of neo4j to be instantiated (2.1.1 is the default)
 
-    $ neo4ji start <server name>
+    $ neo4ji start <server name> [-V <version>]
 
 stop the server with the given name
 
     $ neo4ji stop <server name>
+
+Set the default version for neo4ji to instantiate
+
+    $ neo4ji config -V <version>
 
 show a list of instances managed by noe4ji
 
@@ -38,6 +42,9 @@ show a list of instances managed by noe4ji
 The module has the following functions:
 
     var neo4ji = require('neo4ji')
+
+    //Set the default version of neo4j to 2.0.3
+    neo4ji.config({neo4jVersion:"2.0.3"});
 
     //create a server instance called testServer
     neo4ji.create('testServer');
@@ -62,6 +69,7 @@ The module has the following functions:
 - calling <code>create</code> will always create a new instance, overwriting any existing instance
 - calling <code>start</code> will create an instance if none exists
 - everything is done synchronously
-- the initial usage of the command line tool or the module will fetch the neo4j tarball from neo4j.org, so it may take a while
+- the initial usage of the command line tool or the module to create a datavase with a given version will fetch the neo4j tarball from neo4j.org, so it may take a while
 - calling <code>neo4ji.instance()</code> calls <code>start</code>, so it is garonteed to return an initialized instance
 - <code>neo4ji.instance()</code> creates an instance of a [node-neo4j](https://github.com/thingdom/node-neo4j) database object
+- instances are placed in the folder <code>neo4ji/instances</code> relative to the directory from which neo4ji is called

@@ -6,15 +6,20 @@ var sh = require('execSync')
 var fs = require('fs')
 var args = require('minimist')(process.argv.slice(2));
 
+console.dir(args);
+
 var currentPort;
 var cwd = process.cwd();
 
 var neo4jiDir = cwd + '/neo4ji/';
 var instancesDir = neo4jiDir + 'instances/';
+var templatesDir = __dirname + '/templates/';
+configFilePath = __dirname + '/config.json'
 
 var instanceFilePath = neo4jiDir + 'instances.json';
 
 var neo4j = require('neo4j');
+var config;
 
 function setup(){
 
@@ -24,10 +29,14 @@ function setup(){
     if(!fs.existsSync(instancesDir)){
         exec('mkdir ' + instancesDir)
     }
-    if(!fs.existsSync(__dirname + '/template.tar.gz')){
-        console.log('fetching neo4ji tarball...')
-        exec('curl http://dist.neo4j.org/neo4j-community-2.1.1-unix.tar.gz > ' + __dirname + '/template.tar.gz');
+    if(!fs.existsSync(templatesDir)){
+        exec('mkdir ' + templatesDir)
+
     }
+
+    config = JSON.parse(fs.readFileSync(configFilePath));
+
+    console.dir(config)
 
     var instancesFile = null;
     try{
@@ -46,6 +55,17 @@ function setup(){
 }
 
 setup();
+
+function templatePath(version){
+    return templatesDir + version + '.tar.gz';
+}
+
+function fetchTemplate(version){
+
+    console.log('fetching neo4ji tarball...')
+    exec('curl http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz > ' + templatePath(version));
+
+}
 
 function nextPort(){
     return currentPort += 2;
@@ -70,13 +90,33 @@ function exec(string){
 
 }
 
-function createInstance(name){
+function createInstance(name, version){
 
     var port = nextPort();
 
+    if(!version){
+        version  = config.neo4jVersion;
+    }
+
+    console.log('version: ' + version);
+
+    if(!fs.existsSync(templatePath(version))){
+        fetchTemplate(version);
+    }
+
     exec('rm -rf ' + instancesDir + name);
-    exec('tar -xjf ' + __dirname + '/template.tar.gz -C ' + instancesDir);
-    exec('mv ' + instancesDir + '/neo4j-community-2.1.1/ ' + instancesDir + name);
+    exec('tar -xjf ' + templatePath(version) + ' -C ' + instancesDir);
+
+
+    if(!fs.existsSync(instancesDir + 'neo4j-community-' + version)){
+        exec('rm -rf ' + templatePath(version));
+        console.error('failed to fetch http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz');
+        console.error("It's possible there is no internet connection, or that this version doesn't exist");
+        console.error("Check http://www.neo4j.org/download/other_versions for all available versions");
+        process.exit(1);
+    }
+
+    exec('mv ' + instancesDir + 'neo4j-community-' + version + ' ' + instancesDir + name);
 
     var props = fs.readFileSync(__dirname + '/propertiesTemplate.properties', 'utf8');
     props = props.replace('{HTTP_PORT}', '' + port);
@@ -102,10 +142,10 @@ function destroyInstance(name){
 
 }
 
-function startInstance(name){
+function startInstance(name, version){
 
     if(!fs.existsSync(instancesDir + name)){
-        createInstance(name);
+        createInstance(name, version);
     }
 
     exec( instancesDir + name + '/bin/neo4j start');
@@ -120,16 +160,29 @@ function stopInstance(name){
 
 }
 
+function configure(options){
+
+    for(var key in options){
+        config[key] = options[key];
+    }
+
+    exec('rm -rf ' + configFilePath)
+    fs.writeFileSync(configFilePath, JSON.stringify(config, null, 4));
+    return config;
+
+}
+
 exports.createInstance = createInstance;
 exports.destroyInstance = destroyInstance;
 exports.startInstance = startInstance;
 exports.stopInstance = stopInstance;
+exports.config = configure;
 
 exports.instances = function(){
     return instances;
 }
 
-exports.instance = function(name){
-    startInstance(name);
+exports.instance = function(name, version){
+    startInstance(name, version);
     return new neo4j.GraphDatabase('http://localhost:' + instances[name]);
 }
