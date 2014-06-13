@@ -78,6 +78,8 @@ function saveInstances(){
         instances:instances
     }
 
+    console.log('new instances: ' + JSON.stringify(instancesFile, null, 4));
+
     exec('rm -rf ' + instanceFilePath)
     fs.writeFileSync(instanceFilePath, JSON.stringify(instancesFile, null, 4));
 
@@ -184,5 +186,11 @@ exports.instances = function(){
 
 exports.instance = function(name, version){
     startInstance(name, version);
-    return new neo4j.GraphDatabase('http://localhost:' + instances[name]);
+    return new neo4j.GraphDatabase('http://localhost:' + instances[name].port);
+}
+
+exports.clearInstance = function(name, callback){
+    console.log('clearing ' + name)
+    var instance = exports.instance(name);
+    instance.query('MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r', {}, callback);
 }
