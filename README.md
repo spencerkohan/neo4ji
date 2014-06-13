@@ -1,10 +1,8 @@
-**Introduction**
-
-Neo4ji offers tools for creating and managing multiple local neo4j instances
-
 **About**
 
-I put this together as a convienience utility for spinning up multiple instances of neo4j for testing.  It is built for ease of use in a development setting, and probably should not be considered ready for production.
+Neo4ji offers tools for creating and managing multiple local neo4j instances.
+
+It is built for ease of use in a development setting, and probably should not be considered ready for production.
 
 **Installation**
 

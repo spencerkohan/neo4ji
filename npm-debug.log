@@ -26,15 +26,15 @@
 16 silly git,fetch,-a,origin,/Users/spencerkohan/.npm/_git-remotes/git-github-com-spencerkohan-neo4ji-git-fe064d8e spawning
 17 silly exec git "rev-list" "-n1" "master"
 18 silly git,rev-list,-n1,master,/Users/spencerkohan/.npm/_git-remotes/git-github-com-spencerkohan-neo4ji-git-fe064d8e spawning
-19 verbose git rev-list -n1 master 3d70f5400ac6cb38a9406dd59a44eb9383fe628d
-20 verbose resolved git url git://github.com/spencerkohan/neo4ji.git#3d70f5400ac6cb38a9406dd59a44eb9383fe628d
+19 verbose git rev-list -n1 master 25bed212ecd9511e7c3d0c416e37715420869356
+20 verbose resolved git url git://github.com/spencerkohan/neo4ji.git#25bed212ecd9511e7c3d0c416e37715420869356
 21 verbose git fetch -a origin (git://github.com/spencerkohan/neo4ji.git) From git://github.com/spencerkohan/neo4ji
-21 verbose git fetch -a origin (git://github.com/spencerkohan/neo4ji.git)    3d70f54..9d28137  master     -> master
-22 verbose tar unpack /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/tmp.tgz
-23 silly lockFile 3b9c3a90-92998-0-5330467245075852-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package
-24 verbose lock /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package /Users/spencerkohan/.npm/3b9c3a90-92998-0-5330467245075852-package.lock
-25 silly lockFile ca42506e-92998-0-5330467245075852-tmp-tgz /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/tmp.tgz
-26 verbose lock /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/tmp.tgz /Users/spencerkohan/.npm/ca42506e-92998-0-5330467245075852-tmp-tgz.lock
+21 verbose git fetch -a origin (git://github.com/spencerkohan/neo4ji.git)    25bed21..639fc23  master     -> master
+22 verbose tar unpack /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/tmp.tgz
+23 silly lockFile 10b6dde8-34079-0-5263777880463749-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package
+24 verbose lock /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package /Users/spencerkohan/.npm/10b6dde8-34079-0-5263777880463749-package.lock
+25 silly lockFile 4d466c8a-34079-0-5263777880463749-tmp-tgz /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/tmp.tgz
+26 verbose lock /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/tmp.tgz /Users/spencerkohan/.npm/4d466c8a-34079-0-5263777880463749-tmp-tgz.lock
 27 silly gunzTarPerm modes [ '755', '644' ]
 28 silly gunzTarPerm extractEntry
 29 silly gunzTarPerm modified mode [ '', 509, 493 ]
@@ -48,101 +48,106 @@
 37 silly gunzTarPerm modified mode [ 'neo4ji-cli.js', 509, 493 ]
 38 silly gunzTarPerm extractEntry neo4ji.js
 39 silly gunzTarPerm modified mode [ 'neo4ji.js', 509, 493 ]
-40 silly gunzTarPerm extractEntry package.json
-41 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
-42 silly gunzTarPerm extractEntry propertiesTemplate.properties
-43 silly gunzTarPerm modified mode [ 'propertiesTemplate.properties', 436, 420 ]
-44 verbose read json /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package/package.json
-45 silly lockFile 3b9c3a90-92998-0-5330467245075852-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package
-46 silly lockFile 3b9c3a90-92998-0-5330467245075852-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package
-47 silly lockFile ca42506e-92998-0-5330467245075852-tmp-tgz /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/tmp.tgz
-48 silly lockFile ca42506e-92998-0-5330467245075852-tmp-tgz /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/tmp.tgz
-49 verbose from cache /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package/package.json
-50 verbose tar pack [ '/Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz',
-50 verbose tar pack   '/var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package' ]
-51 verbose tarball /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz
-52 verbose folder /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package
-53 silly lockFile 3b9c3a90-92998-0-5330467245075852-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package
-54 verbose lock /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package /Users/spencerkohan/.npm/3b9c3a90-92998-0-5330467245075852-package.lock
-55 silly lockFile 0d34037c-han-npm-neo4ji-0-0-0-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz
-56 verbose lock /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz /Users/spencerkohan/.npm/0d34037c-han-npm-neo4ji-0-0-0-package-tgz.lock
-57 silly lockFile 3b9c3a90-92998-0-5330467245075852-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package
-58 silly lockFile 3b9c3a90-92998-0-5330467245075852-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-14850/1401966192998-0.5330467245075852/package
-59 silly lockFile 0d34037c-han-npm-neo4ji-0-0-0-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz
-60 silly lockFile 0d34037c-han-npm-neo4ji-0-0-0-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz
-61 silly lockFile 6209bc94-erkohan-npm-neo4ji-0-0-0-package /Users/spencerkohan/.npm/neo4ji/0.0.0/package
-62 verbose lock /Users/spencerkohan/.npm/neo4ji/0.0.0/package /Users/spencerkohan/.npm/6209bc94-erkohan-npm-neo4ji-0-0-0-package.lock
-63 silly lockFile 6209bc94-erkohan-npm-neo4ji-0-0-0-package /Users/spencerkohan/.npm/neo4ji/0.0.0/package
-64 silly lockFile 6209bc94-erkohan-npm-neo4ji-0-0-0-package /Users/spencerkohan/.npm/neo4ji/0.0.0/package
-65 verbose tar unpack /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz
-66 silly lockFile 6209bc94-erkohan-npm-neo4ji-0-0-0-package /Users/spencerkohan/.npm/neo4ji/0.0.0/package
-67 verbose lock /Users/spencerkohan/.npm/neo4ji/0.0.0/package /Users/spencerkohan/.npm/6209bc94-erkohan-npm-neo4ji-0-0-0-package.lock
-68 silly lockFile 0d34037c-han-npm-neo4ji-0-0-0-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz
-69 verbose lock /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz /Users/spencerkohan/.npm/0d34037c-han-npm-neo4ji-0-0-0-package-tgz.lock
-70 silly gunzTarPerm modes [ '755', '644' ]
-71 silly gunzTarPerm extractEntry package.json
-72 silly gunzTarPerm extractEntry .npmignore
-73 silly gunzTarPerm extractEntry README.md
-74 silly gunzTarPerm extractEntry neo4ji-cli.js
-75 silly gunzTarPerm extractEntry neo4ji.js
-76 silly gunzTarPerm extractEntry config.json
-77 silly gunzTarPerm extractEntry propertiesTemplate.properties
-78 verbose read json /Users/spencerkohan/.npm/neo4ji/0.0.0/package/package.json
-79 silly lockFile 6209bc94-erkohan-npm-neo4ji-0-0-0-package /Users/spencerkohan/.npm/neo4ji/0.0.0/package
-80 silly lockFile 6209bc94-erkohan-npm-neo4ji-0-0-0-package /Users/spencerkohan/.npm/neo4ji/0.0.0/package
-81 silly lockFile 0d34037c-han-npm-neo4ji-0-0-0-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz
-82 silly lockFile 0d34037c-han-npm-neo4ji-0-0-0-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz
-83 silly shasum updated bytes 3174
-84 info shasum d1826c5ccf4fd35c5a6566cdf55c5770516691b9
-84 info shasum /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz
-85 verbose from cache /Users/spencerkohan/.npm/neo4ji/0.0.0/package/package.json
-86 verbose chmod /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz 644
-87 verbose chown /Users/spencerkohan/.npm/neo4ji/0.0.0/package.tgz [ 501, 20 ]
-88 silly lockFile fe064d8e-thub-com-spencerkohan-neo4ji-git git://github.com/spencerkohan/neo4ji.git
-89 silly lockFile fe064d8e-thub-com-spencerkohan-neo4ji-git git://github.com/spencerkohan/neo4ji.git
-90 silly publish { name: 'neo4ji',
-90 silly publish   version: '0.0.0',
-90 silly publish   description: 'neo4ji offers a set of tools for managing multiple neo4j instances on the same machine',
-90 silly publish   main: 'neo4ji.js',
-90 silly publish   scripts: {},
-90 silly publish   bin: { neo4ji: 'neo4ji-cli.js' },
-90 silly publish   repository:
-90 silly publish    { type: 'git',
-90 silly publish      url: 'https://github.com/spencerkohan/neo4ji.git' },
-90 silly publish   keywords: [ 'neo4j', 'database', 'db', 'graph' ],
-90 silly publish   author: { name: 'Spencer Kohan' },
-90 silly publish   license: 'BSD',
-90 silly publish   dependencies: { minimist: '>=0.x', execSync: '>=0.x', neo4j: '>=0.x' },
-90 silly publish   readme: '**Introduction**\n\nNeo4ji offers tools for creating and managing multiple local neo4j instances\n\n**About**\n\nI put this together as a convienience utility for spinning up multiple instances of neo4j for testing.  It is built for ease of use in a development setting, and probably should not be considered ready for production.\n\n**Installation**\n\n    $ npm install neo4ji\n\n**Usage**\n\nNeo4ji consists of a command line tool and a node module.  The command line tool has the following options:\n\ncreate a server with the given name.  Optionally set a specific version of neo4j to be instantiated (2.1.1 is the default)\n\n    $ neo4ji create <server name> [-V <version>]\n\ndestroy the server with the given name\n\n    $ neo4ji destroy <server name>\n\nstart the server with the given name (a new server will be created if none exists). Optionally set a specific version of neo4j to be instantiated (2.1.1 is the default)\n\n    $ neo4ji start <server name> [-V <version>]\n\nstop the server with the given name\n\n    $ neo4ji stop <server name>\n\nSet the default version for neo4ji to instantiate\n\n    $ neo4ji config -V <version>\n\nshow a list of instances managed by noe4ji\n\n    $ neo4ji instances\n\n\nThe module has the following functions:\n\n    var neo4ji = require(\'neo4ji\')\n\n    //Set the default version of neo4j to 2.0.3\n    neo4ji.config({neo4jVersion:"2.0.3"});\n\n    //create a server instance called testServer\n    neo4ji.create(\'testServer\');\n\n    //start the testServer instance\n    neo4ji.start(\'testServer\');\n\n    //get the instances object\n    var instances = neo4ji.instances();\n\n    //get a graph server instance for testServer\n    var graph = neo4ji.instance(\'testServer\');\n\n    //stop the testServer instance\n    neo4ji.stop(\'testServer\');\n\n    //destroy the testServer instance\n    neo4ji.destroy(\'testServer\');\n\n**Notes on behavior**\n\n- calling <code>create</code> will always create a new instance, overwriting any existing instance\n- calling <code>start</code> will create an instance if none exists\n- everything is done synchronously\n- the initial usage of the command line tool or the module to create a datavase with a given version will fetch the neo4j tarball from neo4j.org, so it may take a while\n- calling <code>neo4ji.instance()</code> calls <code>start</code>, so it is garonteed to return an initialized instance\n- <code>neo4ji.instance()</code> creates an instance of a [node-neo4j](https://github.com/thingdom/node-neo4j) database object\n- instances are placed in the folder <code>neo4ji/instances</code> relative to the directory from which neo4ji is called\n',
-90 silly publish   readmeFilename: 'README.md',
-90 silly publish   _id: 'neo4ji@0.0.0',
-90 silly publish   dist: { shasum: 'd1826c5ccf4fd35c5a6566cdf55c5770516691b9' },
-90 silly publish   _resolved: 'git://github.com/spencerkohan/neo4ji.git#3d70f5400ac6cb38a9406dd59a44eb9383fe628d' }
-91 info prepublish neo4ji@0.0.0
-92 verbose url raw neo4ji
-93 verbose url resolving [ 'https://registry.npmjs.org/', './neo4ji' ]
-94 verbose url resolved https://registry.npmjs.org/neo4ji
-95 info trying registry request attempt 1 at 13:03:13
-96 http PUT https://registry.npmjs.org/neo4ji
-97 http 201 https://registry.npmjs.org/neo4ji
-98 verbose url raw neo4ji
-99 verbose url resolving [ 'https://registry.npmjs.org/', './neo4ji' ]
-100 verbose url resolved https://registry.npmjs.org/neo4ji
-101 info trying registry request attempt 1 at 13:03:14
-102 http GET https://registry.npmjs.org/neo4ji
-103 http 200 https://registry.npmjs.org/neo4ji
-104 error publish fail Cannot publish over existing version.
-104 error publish fail Update the 'version' field in package.json and try again.
-104 error publish fail
-104 error publish fail If the previous version was published in error, see:
-104 error publish fail     npm help unpublish
-104 error publish fail
-104 error publish fail To automatically increment version numbers, see:
-104 error publish fail     npm help version
-105 error System Darwin 13.1.0
-106 error command "node" "/usr/local/bin/npm" "publish" "git://github.com/spencerkohan/neo4ji.git"
-107 error cwd /Users/spencerkohan/Projects/Personal/NodeModules/neo4ji
-108 error node -v v0.8.20
-109 error npm -v 1.2.11
-110 error code EPUBLISHCONFLICT
-111 verbose exit [ 1, true ]
+40 silly gunzTarPerm extractEntry npm-debug.log
+41 silly gunzTarPerm modified mode [ 'npm-debug.log', 436, 420 ]
+42 silly gunzTarPerm extractEntry package.json
+43 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+44 silly gunzTarPerm extractEntry propertiesTemplate.properties
+45 silly gunzTarPerm modified mode [ 'propertiesTemplate.properties', 436, 420 ]
+46 verbose read json /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package/package.json
+47 silly lockFile 10b6dde8-34079-0-5263777880463749-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package
+48 silly lockFile 10b6dde8-34079-0-5263777880463749-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package
+49 silly lockFile 4d466c8a-34079-0-5263777880463749-tmp-tgz /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/tmp.tgz
+50 silly lockFile 4d466c8a-34079-0-5263777880463749-tmp-tgz /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/tmp.tgz
+51 verbose from cache /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package/package.json
+52 verbose tar pack [ '/Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz',
+52 verbose tar pack   '/var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package' ]
+53 verbose tarball /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz
+54 verbose folder /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package
+55 silly lockFile 10b6dde8-34079-0-5263777880463749-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package
+56 verbose lock /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package /Users/spencerkohan/.npm/10b6dde8-34079-0-5263777880463749-package.lock
+57 silly lockFile 344ae32c-han-npm-neo4ji-0-0-1-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz
+58 verbose lock /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz /Users/spencerkohan/.npm/344ae32c-han-npm-neo4ji-0-0-1-package-tgz.lock
+59 silly lockFile 10b6dde8-34079-0-5263777880463749-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package
+60 silly lockFile 10b6dde8-34079-0-5263777880463749-package /var/folders/mf/0dxyvvs17fb_02n9htw4r3l80000gn/T/npm-9271/1402649934079-0.5263777880463749/package
+61 silly lockFile 344ae32c-han-npm-neo4ji-0-0-1-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz
+62 silly lockFile 344ae32c-han-npm-neo4ji-0-0-1-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz
+63 silly lockFile 6fd52155-erkohan-npm-neo4ji-0-0-1-package /Users/spencerkohan/.npm/neo4ji/0.0.1/package
+64 verbose lock /Users/spencerkohan/.npm/neo4ji/0.0.1/package /Users/spencerkohan/.npm/6fd52155-erkohan-npm-neo4ji-0-0-1-package.lock
+65 silly lockFile 6fd52155-erkohan-npm-neo4ji-0-0-1-package /Users/spencerkohan/.npm/neo4ji/0.0.1/package
+66 silly lockFile 6fd52155-erkohan-npm-neo4ji-0-0-1-package /Users/spencerkohan/.npm/neo4ji/0.0.1/package
+67 verbose tar unpack /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz
+68 silly lockFile 6fd52155-erkohan-npm-neo4ji-0-0-1-package /Users/spencerkohan/.npm/neo4ji/0.0.1/package
+69 verbose lock /Users/spencerkohan/.npm/neo4ji/0.0.1/package /Users/spencerkohan/.npm/6fd52155-erkohan-npm-neo4ji-0-0-1-package.lock
+70 silly lockFile 344ae32c-han-npm-neo4ji-0-0-1-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz
+71 verbose lock /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz /Users/spencerkohan/.npm/344ae32c-han-npm-neo4ji-0-0-1-package-tgz.lock
+72 silly gunzTarPerm modes [ '755', '644' ]
+73 silly gunzTarPerm extractEntry package.json
+74 silly gunzTarPerm extractEntry .npmignore
+75 silly gunzTarPerm extractEntry README.md
+76 silly gunzTarPerm extractEntry neo4ji-cli.js
+77 silly gunzTarPerm extractEntry neo4ji.js
+78 silly gunzTarPerm extractEntry config.json
+79 silly gunzTarPerm extractEntry propertiesTemplate.properties
+80 verbose read json /Users/spencerkohan/.npm/neo4ji/0.0.1/package/package.json
+81 silly lockFile 6fd52155-erkohan-npm-neo4ji-0-0-1-package /Users/spencerkohan/.npm/neo4ji/0.0.1/package
+82 silly lockFile 6fd52155-erkohan-npm-neo4ji-0-0-1-package /Users/spencerkohan/.npm/neo4ji/0.0.1/package
+83 silly lockFile 344ae32c-han-npm-neo4ji-0-0-1-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz
+84 silly lockFile 344ae32c-han-npm-neo4ji-0-0-1-package-tgz /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz
+85 silly shasum updated bytes 3268
+86 info shasum 4dc4654c499b1456eb8f678ea19f6e13f5b00cc6
+86 info shasum /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz
+87 verbose from cache /Users/spencerkohan/.npm/neo4ji/0.0.1/package/package.json
+88 verbose chmod /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz 644
+89 verbose chown /Users/spencerkohan/.npm/neo4ji/0.0.1/package.tgz [ 501, 20 ]
+90 silly lockFile fe064d8e-thub-com-spencerkohan-neo4ji-git git://github.com/spencerkohan/neo4ji.git
+91 silly lockFile fe064d8e-thub-com-spencerkohan-neo4ji-git git://github.com/spencerkohan/neo4ji.git
+92 silly publish { name: 'neo4ji',
+92 silly publish   version: '0.0.1',
+92 silly publish   description: 'neo4ji offers a set of tools for managing multiple neo4j instances on the same machine',
+92 silly publish   main: 'neo4ji.js',
+92 silly publish   scripts: {},
+92 silly publish   bin: { neo4ji: 'neo4ji-cli.js' },
+92 silly publish   repository:
+92 silly publish    { type: 'git',
+92 silly publish      url: 'https://github.com/spencerkohan/neo4ji.git' },
+92 silly publish   keywords: [ 'neo4j', 'database', 'db', 'graph' ],
+92 silly publish   author: { name: 'Spencer Kohan' },
+92 silly publish   license: 'BSD',
+92 silly publish   dependencies: { minimist: '>=0.x', execSync: '>=0.x', neo4j: '>=0.x' },
+92 silly publish   readme: '**Introduction**\n\nNeo4ji offers tools for creating and managing multiple local neo4j instances\n\n**About**\n\nI put this together as a convienience utility for spinning up multiple instances of neo4j for testing.  It is built for ease of use in a development setting, and probably should not be considered ready for production.\n\n**Installation**\n\n    $ npm install neo4ji\n\n**Usage**\n\nNeo4ji consists of a command line tool and a node module.  The command line tool has the following options:\n\ncreate a server with the given name.  Optionally set a specific version of neo4j to be instantiated (2.1.1 is the default)\n\n    $ neo4ji create <server name> [-V <version>]\n\ndestroy the server with the given name\n\n    $ neo4ji destroy <server name>\n\nstart the server with the given name (a new server will be created if none exists). Optionally set a specific version of neo4j to be instantiated (2.1.1 is the default)\n\n    $ neo4ji start <server name> [-V <version>]\n\nstop the server with the given name\n\n    $ neo4ji stop <server name>\n\nSet the default version for neo4ji to instantiate\n\n    $ neo4ji config -V <version>\n\nshow a list of instances managed by noe4ji\n\n    $ neo4ji instances\n\n\nThe module has the following functions:\n\n    var neo4ji = require(\'neo4ji\')\n\n    //Set the default version of neo4j to 2.0.3\n    neo4ji.config({neo4jVersion:"2.0.3"});\n\n    //create a server instance called testServer\n    neo4ji.create(\'testServer\');\n\n    //start the testServer instance\n    neo4ji.start(\'testServer\');\n\n    //get the instances object\n    var instances = neo4ji.instances();\n\n    //get a graph server instance for testServer\n    var graph = neo4ji.instance(\'testServer\');\n\n    //stop the testServer instance\n    neo4ji.stop(\'testServer\');\n\n    //destroy the testServer instance\n    neo4ji.destroy(\'testServer\');\n\n**Notes on behavior**\n\n- calling <code>create</code> will always create a new instance, overwriting any existing instance\n- calling <code>start</code> will create an instance if none exists\n- everything is done synchronously\n- the initial usage of the command line tool or the module to create a datavase with a given version will fetch the neo4j tarball from neo4j.org, so it may take a while\n- calling <code>neo4ji.instance()</code> calls <code>start</code>, so it is garonteed to return an initialized instance\n- <code>neo4ji.instance()</code> creates an instance of a [node-neo4j](https://github.com/thingdom/node-neo4j) database object\n- instances are placed in the folder <code>neo4ji/instances</code> relative to the directory from which neo4ji is called\n',
+92 silly publish   readmeFilename: 'README.md',
+92 silly publish   _id: 'neo4ji@0.0.1',
+92 silly publish   dist: { shasum: '4dc4654c499b1456eb8f678ea19f6e13f5b00cc6' },
+92 silly publish   _resolved: 'git://github.com/spencerkohan/neo4ji.git#25bed212ecd9511e7c3d0c416e37715420869356' }
+93 info prepublish neo4ji@0.0.1
+94 verbose url raw neo4ji
+95 verbose url resolving [ 'https://registry.npmjs.org/', './neo4ji' ]
+96 verbose url resolved https://registry.npmjs.org/neo4ji
+97 info trying registry request attempt 1 at 10:58:54
+98 http PUT https://registry.npmjs.org/neo4ji
+99 http 403 https://registry.npmjs.org/neo4ji
+100 info trying registry request attempt 1 at 10:58:56
+101 http PUT https://registry.npmjs.org/neo4ji
+102 http 201 https://registry.npmjs.org/neo4ji
+103 verbose url raw neo4ji
+104 verbose url resolving [ 'https://registry.npmjs.org/', './neo4ji' ]
+105 verbose url resolved https://registry.npmjs.org/neo4ji
+106 info trying registry request attempt 1 at 10:58:57
+107 http GET https://registry.npmjs.org/neo4ji
+108 http 200 https://registry.npmjs.org/neo4ji
+109 error publish fail Cannot publish over existing version.
+109 error publish fail Update the 'version' field in package.json and try again.
+109 error publish fail
+109 error publish fail If the previous version was published in error, see:
+109 error publish fail     npm help unpublish
+109 error publish fail
+109 error publish fail To automatically increment version numbers, see:
+109 error publish fail     npm help version
+110 error System Darwin 13.1.0
+111 error command "node" "/usr/local/bin/npm" "publish" "git://github.com/spencerkohan/neo4ji.git"
+112 error cwd /Users/spencerkohan/Projects/Personal/NodeModules/neo4ji
+113 error node -v v0.8.20
+114 error npm -v 1.2.11
+115 error code EPUBLISHCONFLICT
+116 verbose exit [ 1, true ]
