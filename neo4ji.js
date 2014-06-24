@@ -78,7 +78,7 @@ function saveInstances(){
         instances:instances
     }
 
-    console.log('new instances: ' + JSON.stringify(instancesFile, null, 4));
+    //console.log('new instances: ' + JSON.stringify(instancesFile, null, 4));
 
     exec('rm -rf ' + instanceFilePath)
     fs.writeFileSync(instanceFilePath, JSON.stringify(instancesFile, null, 4));
@@ -87,7 +87,7 @@ function saveInstances(){
 
 function exec(string){
 
-    console.log('exec: ' + string);
+    //console.log('exec: ' + string);
     sh.exec(string);
 
 }
@@ -100,7 +100,6 @@ function createInstance(name, version){
         version  = config.neo4jVersion;
     }
 
-    console.log('version: ' + version);
 
     if(!fs.existsSync(templatePath(version))){
         fetchTemplate(version);
@@ -190,7 +189,6 @@ exports.instance = function(name, version){
 }
 
 exports.clearInstance = function(name, callback){
-    console.log('clearing ' + name)
     var instance = exports.instance(name);
     instance.query('MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r', {}, callback);
 }

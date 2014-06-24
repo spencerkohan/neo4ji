@@ -1,6 +1,6 @@
 {
   "name": "neo4ji",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "neo4ji offers a set of tools for managing multiple neo4j instances on the same machine",
   "main": "neo4ji.js",
   "scripts": {
