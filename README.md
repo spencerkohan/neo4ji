@@ -71,3 +71,11 @@ The module has the following functions:
 - calling <code>neo4ji.instance()</code> calls <code>start</code>, so it is garonteed to return an initialized instance
 - <code>neo4ji.instance()</code> creates an instance of a [node-neo4j](https://github.com/thingdom/node-neo4j) database object
 - instances are placed in the folder <code>neo4ji/instances</code> relative to the directory from which neo4ji is called
+
+**Dependancies**
+
+This module depends on wget or curl to download neo4j.  If you see this error:
+
+    Error: unable to find [ curl ] or [ wget ] in PATH
+
+it is because neo4ji was unable to find curl or wget on your system.

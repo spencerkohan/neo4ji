@@ -6,7 +6,7 @@ var sh = require('execSync')
 var fs = require('fs')
 var args = require('minimist')(process.argv.slice(2));
 
-console.dir(args);
+//console.dir(args);
 
 var currentPort;
 var cwd = process.cwd();
@@ -36,7 +36,7 @@ function setup(){
 
     config = JSON.parse(fs.readFileSync(configFilePath));
 
-    console.dir(config)
+    //console.dir(config)
 
     var instancesFile = null;
     try{
@@ -63,7 +63,28 @@ function templatePath(version){
 function fetchTemplate(version){
 
     console.log('fetching neo4ji tarball...')
-    exec('curl http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz > ' + templatePath(version));
+
+    var res = exec('which wget');
+
+    if(res.code == 0){
+
+        console.log('using wget...')
+
+        exec('curl http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz > ' + templatePath(version));
+
+    }else if(exec('which curl').code == 0){
+
+        console.log('using curl...')
+
+        exec('curl http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz > ' + templatePath(version));
+
+    }else{
+
+        throw new Error('unable to find [ curl ] or [ wget ] in PATH');
+
+    }
+
+
 
 }
 
@@ -88,7 +109,12 @@ function saveInstances(){
 function exec(string){
 
     //console.log('exec: ' + string);
-    sh.exec(string);
+    var res = sh.exec(string);
+    if(res.code != 0){
+        console.error('exec:$ ' + string);
+        console.error('\t->returned status code: ' + res.code);
+    }
+    return res;
 
 }
 
