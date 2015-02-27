@@ -19,7 +19,7 @@
   "license": "BSD",
   "dependencies": {
     "minimist":">=0.x",
-    "execSync":">=0.x",
+    "sync-exec":">=0.x",
     "neo4j":">=0.x"
   }
 }

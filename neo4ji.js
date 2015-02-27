@@ -2,7 +2,7 @@
 
 var instances = {}
 
-var sh = require('execSync')
+var exec = require('sync-exec')
 var fs = require('fs')
 var args = require('minimist')(process.argv.slice(2));
 
@@ -109,7 +109,7 @@ function saveInstances(){
 function exec(string){
 
     //console.log('exec: ' + string);
-    var res = sh.exec(string);
+    var res = exec(string);
     if(res.code != 0){
         console.error('exec:$ ' + string);
         console.error('\t->returned status code: ' + res.code);
@@ -151,7 +151,7 @@ function createInstance(name, version){
 
     var propertiesPath = instancesDir + name + '/conf/neo4j-server.properties';
 
-    sh.exec('rm -rf ' + propertiesPath);
+    exec('rm -rf ' + propertiesPath);
     fs.writeFileSync(propertiesPath, props);
 
     instances[name] = {
@@ -163,7 +163,7 @@ function createInstance(name, version){
 
 function destroyInstance(name){
 
-    sh.exec('rm -rf ' + instancesDir + name);
+    exec('rm -rf ' + instancesDir + name);
     delete instances[name];
     saveInstances();
 
