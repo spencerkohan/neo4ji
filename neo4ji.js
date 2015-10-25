@@ -66,13 +66,13 @@ function fetchTemplate(version){
 
     var res = exec('which wget');
 
-    if(res.code == 0){
+    if(res.status == 0){
 
         console.log('using wget...')
 
         exec('curl http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz > ' + templatePath(version));
 
-    }else if(exec('which curl').code == 0){
+    }else if(exec('which curl').status == 0){
 
         console.log('using curl...')
 
