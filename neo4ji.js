@@ -70,13 +70,13 @@ function fetchTemplate(version){
 
         console.log('using wget...')
 
-        exec('curl http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz > ' + templatePath(version));
+        exec('wget http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz -o ' + templatePath(version));
 
     }else if(exec('which curl').status == 0){
 
         console.log('using curl...')
 
-        exec('curl http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz > ' + templatePath(version));
+        exec('curl http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz -o ' + templatePath(version));
 
     }else{
 
