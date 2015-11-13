@@ -70,7 +70,7 @@ function fetchTemplate(version){
 
         console.log('using wget...')
 
-        exec('wget http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz -o ' + templatePath(version));
+        exec('wget http://dist.neo4j.org/neo4j-community-' + version + '-unix.tar.gz -O ' + templatePath(version));
 
     }else if(exec('which curl').status == 0){
 
